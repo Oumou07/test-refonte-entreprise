@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Entreprise - FNATH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- En-tête de la page -->
+    <header>
+        <div class="container">
+            <h1>FNATH - Espace Entreprise & Partenaires</h1>
+            <p>Engagez-vous pour la prévention, la santé au travail et le maintien dans l'emploi.</p>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="container">
+        <section class="intro">
+            <h2>Pourquoi collaborer avec nous ?</h2>
+            <p>En tant qu'association reconnue, nous accompagnons les employeurs dans leurs démarches de prévention des risques professionnels et d'inclusion.</p>
+        </section>
+
+        <!-- Nos services en grille -->
+        <section class="services-grid">
+            <div class="card">
+                <h3>Prévention des risques</h3>
+                <p>Sensibilisez vos équipes aux accidents du travail et maladies professionnelles.</p>
+            </div>
+            <div class="card">
+                <h3>Maintien dans l'emploi</h3>
+                <p>Solutions d'accompagnement pour les salariés en situation de handicap ou de reconversion.</p>
+            </div>
+            <div class="card">
+                <h3>Formations sur-mesure</h3>
+                <p>Modules adaptés pour vos managers et vos équipes RH.</p>
+            </div>
+        </section>
+
+        <!-- Formulaire de contact interactif -->
+        <section class="contact-section">
+            <h2>Contactez notre service partenariats</h2>
+            <form id="contactForm">
+                <label for="societe">Nom de l'entreprise :</label>
+                <input type="text" id="societe" required>
+
+                <label for="email">Email professionnel :</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Votre demande :</label>
+                <textarea id="message" rows="4" required></textarea>
+
+                <button type="submit">Envoyer la demande</button>
+            </form>
+            <p id="formMessage" style="color: green; margin-top: 10px;"></p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 FNATH - Projet de refonte Front-End</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
