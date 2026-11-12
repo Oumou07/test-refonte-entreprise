@@ -158,16 +158,16 @@ body {
     padding: 20px 40px;
 }
 
-/* --- HERO SECTION CORRIGÉE (Plus de chevauchement !) --- */
+/* --- HERO SECTION CORRIGÉE (Sans chevauchement) --- */
 .hero-section {
     display: flex;
     align-items: center;
-    gap: 35px; /* Espace propre entre l'image et le bloc rouge */
+    gap: 35px;
     margin-bottom: 50px;
 }
 
 .hero-image {
-    flex: 1; /* Prend 50% de l'espace */
+    flex: 1;
 }
 
 .hero-image img {
@@ -178,11 +178,11 @@ body {
 }
 
 .hero-card-red {
-    flex: 1; /* Prend les 50% restants à droite sans toucher l'image */
+    flex: 1;
     background-color: var(--rouge-fnath);
     color: #ffffff;
     padding: 55px 45px;
-    border-radius: 8px; /* Légèrement adouci pour un rendu plus moderne */
+    border-radius: 8px;
     box-shadow: 0 10px 25px rgba(178, 30, 24, 0.15);
 }
 
@@ -247,4 +247,5 @@ body {
         display: none;
     }
 }
- 
+
+
