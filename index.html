@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace Entreprises – Engagez-vous aux côtés de la FNATH</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@
 
     <!-- Main Header -->
     <header class="main-header">
-        <a href="https://www.fnath.org" class="logo-container">
+        <a href="#" class="logo-container" data-view="home">
             <div class="logo-svg">
                 <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="45" stroke="#1B64A8" stroke-width="8"/>
@@ -39,16 +38,16 @@
             <a href="#">Nous connaître</a>
             <a href="#">S'informer</a>
             <a href="#">Conseil & Défense</a>
-            <a href="#" class="active">Espace entreprise</a>
+            <a href="#" class="active" data-view="home">Espace entreprise</a>
             <a href="#" class="btn-question">Poser votre question</a>
         </nav>
     </header>
 
-    <!-- Hero Section avec le dessin vectoriel inclusif -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
-            <h2>Entreprises : Agir avec la FNATH</h2>
-            <p>Aujourd'hui, le soutien des entreprises est essentiel pour développer nos actions de sensibilisation, d'accompagnement humain et de prévention des risques professionnels.</p>
+            <h2 id="hero-title">Entreprises : Agir avec la FNATH</h2>
+            <p id="hero-desc">Aujourd'hui, le soutien des entreprises est essentiel pour développer nos actions de sensibilisation, d'accompagnement humain et de prévention des risques professionnels.</p>
         </div>
         <div class="hero-illustration">
             <svg viewBox="0 0 520 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration de collaborateurs en situation de handicap travaillant ensemble">
@@ -57,7 +56,7 @@
                 <circle cx="385" cy="105" r="60" fill="#FDF3EE"/>
                 <circle cx="265" cy="240" r="70" fill="#F0F5FA"/>
 
-                <!-- Scène 1 : Poignée de main -->
+                <!-- Scène 1 -->
                 <circle cx="95" cy="65" r="14" fill="#8D5524"/>
                 <path d="M83 58 C83 48, 107 48, 107 58" fill="#2C3E50"/>
                 <path d="M75 135 L80 85 C80 80, 110 80, 110 85 L115 135 Z" fill="#6D4C41"/>
@@ -68,7 +67,7 @@
                 <path d="M155 88 L132 102 L136 110 L160 98 Z" fill="#2980B9"/>
                 <rect x="172" y="96" width="24" height="18" rx="2" fill="#85C1E9"/>
 
-                <!-- Scène 2 : Présentation -->
+                <!-- Scène 2 -->
                 <line x1="415" y1="120" x2="405" y2="155" stroke="#7F8C8D" stroke-width="3" stroke-linecap="round"/>
                 <line x1="445" y1="120" x2="455" y2="155" stroke="#7F8C8D" stroke-width="3" stroke-linecap="round"/>
                 <rect x="395" y="55" width="70" height="65" rx="4" fill="#FFFFFF" stroke="#BDC3C7" stroke-width="2"/>
@@ -124,107 +123,146 @@
 
     <!-- Layout with Sidebar & Content -->
     <div class="container-layout">
-        <!-- Sidebar Navigation avec ancres fonctionnelles -->
+        <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <h3>Espace Entreprise</h3>
             <ul>
-                <li><a href="#engager" class="active">Entreprise : Engagez-vous</a></li>
-                <li><a href="#demarche-rse">Démarche RSE</a></li>
-                <li><a href="#securite-travail">Sécurité au travail</a></li>
-                <li><a href="#mecenat">Mécénat</a></li>
-                <li><a href="#partenaires">Nos partenaires</a></li>
-                <li><a href="#contactez-nous">Contactez-nous</a></li>
+                <li><a href="#engager" class="active" data-view="home">Entreprise : Engagez-vous</a></li>
+                <li><a href="#rse" data-view="rse">Démarche RSE</a></li>
+                <li><a href="#securite" data-view="securite">Sécurité au travail</a></li>
+                <li><a href="#mecenat" data-view="mecenat">Mécénat</a></li>
+                <li><a href="#partenaires" data-view="home" data-scroll="partenaires">Nos partenaires</a></li>
+                <li><a href="#contactez-nous" data-scroll="contactez-nous">Contactez-nous</a></li>
             </ul>
         </aside>
 
         <!-- Main Content Area -->
         <main class="content-main">
-            <!-- 1. Introduction -->
-            <section id="engager" class="content-section">
+
+            <!-- =========================================================
+                 PAGE 1 : VUE PRINCIPALE (Engagez-vous + Partenaires)
+            ========================================================== -->
+            <div id="view-home" class="page-view active-view">
                 <h2>Engagez-vous aux côtés de la FNATH</h2>
                 <p>Depuis plus de 100 ans, la FNATH accompagne les personnes accidentées de la vie, malades, invalides ou en situation de handicap pour favoriser leur autonomie, leur inclusion sociale et leur maintien dans l'emploi.</p>
                 <p>Association reconnue d'utilité publique, nous agissons partout en France grâce à un réseau de bénévoles, de salariés et de partenaires engagés pour bâtir un monde du travail plus inclusif.</p>
 
+                <!-- 3 Cartes menant vers les pages dédiées -->
                 <div class="pillars-grid">
                     <div class="pillar-card">
                         <h3>Démarche RSE</h3>
-                        <p>Intégrez l'inclusion des collaborateurs en situation de handicap au cœur de votre stratégie.</p>
-                        <a href="#demarche-rse" class="card-link">En savoir plus →</a>
+                        <p>Valorisez votre responsabilité sociétale en intégrant l'inclusion des collaborateurs en situation de handicap au cœur de votre stratégie.</p>
+                        <a href="#rse" class="card-link" data-view="rse">En savoir plus →</a>
                     </div>
                     <div class="pillar-card">
                         <h3>Sécurité au travail</h3>
-                        <p>Sensibilisez vos équipes aux risques professionnels grâce à notre expertise de terrain.</p>
-                        <a href="#securite-travail" class="card-link">Découvrir →</a>
+                        <p>Sensibilisez vos équipes aux risques professionnels grâce à notre expertise de terrain et nos retours d'expérience uniques.</p>
+                        <a href="#securite" class="card-link" data-view="securite">Découvrir →</a>
                     </div>
                     <div class="pillar-card">
-                        <h3>Mécénat</h3>
-                        <p>Soutenez nos actions de prévention et bénéficiez d'avantages fiscaux dédiés.</p>
-                        <a href="#mecenat" class="card-link">S'engager →</a>
+                        <h3>Mécénat & Partenariat</h3>
+                        <p>Soutenez nos actions de prévention et bénéficiez d'avantages fiscaux tout en fédérant vos salariés autour d'une cause forte.</p>
+                        <a href="#mecenat" class="card-link" data-view="mecenat">S'engager →</a>
                     </div>
                 </div>
-            </section>
 
-            <!-- 2. Rubrique Démarche RSE -->
-            <section id="demarche-rse" class="content-section section-divider">
-                <span class="section-badge">Axe 1 • Inclusion & Diversité</span>
+                <!-- Section Nos Partenaires & Avis (conservée telle quelle) -->
+                <div class="testimonials-section" id="partenaires">
+                    <h3>Nos partenaires et leurs témoignages</h3>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>« Un partenariat de grande valeur qui a transformé notre approche de la prévention des risques et de l'inclusion en interne. »</p>
+                            <div class="testimonial-author">— DRH, Groupe Industriel Partenaire</div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p>« L'accompagnement et les formations dispensées par la FNATH ont rencontré un écho formidable auprès de nos équipes managériales. »</p>
+                            <div class="testimonial-author">— Responsable RSE, Entreprise Services</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================================================
+                 PAGE 2 : DÉMARCHE RSE (Page dédiée claire et aérée)
+            ========================================================== -->
+            <div id="view-rse" class="page-view" hidden>
+                <a href="#engager" class="back-link" data-view="home">← Retour à l'Espace Entreprises</a>
+                <span class="section-badge">Responsabilité Sociétale</span>
                 <h2>Démarche RSE des entreprises</h2>
-                <p>Accompagner le maintien dans l'emploi et l'intégration des personnes en situation de handicap est un levier majeur de performance sociale et humaine.</p>
-                <ul class="feature-list">
-                    <li><strong>Ateliers de sensibilisation :</strong> Déconstruire les préjugés sur les handicaps visibles et invisibles auprès de vos managers et équipes RH.</li>
-                    <li><strong>Maintien dans l'emploi :</strong> Appui et conseils pour accompagner le retour au poste après un accident de la vie ou une maladie longue.</li>
-                    <li><strong>Valorisation de votre engagement :</strong> Intégration de nos actions communes dans votre rapport extra-financier (RSE).</li>
-                </ul>
-            </section>
+                <p>Intégrer durablement le handicap et la santé au travail est un pilier de la responsabilité sociétale de votre entreprise. La FNATH vous aide à passer des intentions aux actions concrètes.</p>
 
-            <!-- 3. Rubrique Sécurité au travail -->
-            <section id="securite-travail" class="content-section section-divider">
-                <span class="section-badge">Axe 2 • Prévention</span>
+                <div class="detail-cards">
+                    <div class="detail-item">
+                        <h4>1. Sensibiliser vos managers et équipes</h4>
+                        <p>Organisation d'ateliers interactifs sur les handicaps visibles et invisibles pour lever les freins et favoriser la bienveillance au quotidien.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>2. Accompagner le maintien dans l'emploi</h4>
+                        <p>Conseils pratiques pour réussir le retour au poste d'un salarié après un arrêt long, un accident ou l'apparition d'une maladie chronique.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>3. Valoriser votre politique sociale</h4>
+                        <p>Un partenariat reconnu d'utilité publique qui donne du sens à vos engagements extra-financiers (OETH, accords handicap, bilans RSE).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================================================
+                 PAGE 3 : SÉCURITÉ AU TRAVAIL (Page dédiée claire et aérée)
+            ========================================================== -->
+            <div id="view-securite" class="page-view" hidden>
+                <a href="#engager" class="back-link" data-view="home">← Retour à l'Espace Entreprises</a>
+                <span class="section-badge">Prévention des risques</span>
                 <h2>Sécurité au travail : sensibilisation et témoignages</h2>
-                <p>Parce que la prévention est plus parlante lorsqu'elle s'appuie sur le vécu, la FNATH propose des interventions concrètes au sein de vos établissements (Journées Sécurité, Semaine pour la Qualité de Vie au Travail).</p>
-                <ul class="feature-list">
-                    <li><strong>Témoignages d'adhérents :</strong> Des retours d'expérience authentiques sur les accidents du travail, les maladies professionnelles et les risques routiers.</li>
-                    <li><strong>Culture prévention :</strong> Prise de conscience collective autour des gestes de sécurité et du respect des procédures.</li>
-                </ul>
-            </section>
+                <p>Rien ne remplace le vécu pour faire évoluer les comportements. Nos adhérents et intervenants partagent leur expérience au plus près de vos collaborateurs.</p>
 
-            <!-- 4. Rubrique Mécénat -->
-            <section id="mecenat" class="content-section section-divider">
-                <span class="section-badge">Axe 3 • Solidarité</span>
+                <div class="detail-cards">
+                    <div class="detail-item">
+                        <h4>1. Témoignages d'accidentés du travail</h4>
+                        <p>Des échanges humains et marquants lors de vos Journées Sécurité (Safety Days) pour rappeler l'importance vitale des règles de prévention.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>2. Prévention du risque routier professionnel</h4>
+                        <p>Sensibilisation ciblée pour vos collaborateurs itinérants et les trajets domicile-travail, première cause d'accidents mortels au travail.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>3. Qualité de Vie et Conditions de Travail (QVCT)</h4>
+                        <p>Conférences et tables rondes sur la prévention de l'usure professionnelle et des troubles musculo-squelettiques (TMS).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================================================
+                 PAGE 4 : MÉCÉNAT (Page dédiée claire et aérée)
+            ========================================================== -->
+            <div id="view-mecenat" class="page-view" hidden>
+                <a href="#engager" class="back-link" data-view="home">← Retour à l'Espace Entreprises</a>
+                <span class="section-badge">Engagement & Solidarité</span>
                 <h2>Soutenir la FNATH par le mécénat</h2>
-                <p>Reconnue d'utilité publique, la FNATH est habilitée à recevoir des dons ouvrant droit à des réductions fiscales pour les entreprises (mécénat financier, de compétences ou en nature).</p>
+                <p>Reconnue d'utilité publique depuis plus d'un siècle, la FNATH accompagne gratuitement les personnes accidentées et malades dans l'accès à leurs droits.</p>
+
                 <div class="mecenat-highlight">
-                    <strong>60 % de réduction d'impôt :</strong> Conformément à l'article 238 bis du Code général des impôts, votre don ouvre droit à une réduction d'impôt sur les sociétés égale à 60 % du montant versé (dans la limite de 20 000 € ou 0,5 % du chiffre d'affaires).
-                </div>
-            </section>
-
-            <!-- 5. Rubrique Nos partenaires & Avis -->
-            <section id="partenaires" class="content-section section-divider">
-                <span class="section-badge">Réseau & Confiance</span>
-                <h2>Nos partenaires et leurs témoignages</h2>
-                <p>De nombreuses entreprises, mutuelles et institutions soutiennent déjà nos actions partout en France.</p>
-                
-                <div class="partners-logos">
-                    <span class="partner-pill">Groupe Solidaire France</span>
-                    <span class="partner-pill">Mutuelle Prévention Santé</span>
-                    <span class="partner-pill">Réseau Inclusion & Travail</span>
-                    <span class="partner-pill">Fondation Sécurité Plus</span>
+                    <strong>Avantage fiscal : 60 % de réduction d'impôt</strong><br>
+                    Votre don ouvre droit à une réduction d'impôt sur les sociétés égale à 60 % de son montant (dans la limite de 20 000 € ou 0,5 % du chiffre d'affaires HT).
                 </div>
 
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>« Un partenariat de grande valeur qui a transformé notre approche de la prévention des risques et de l'inclusion en interne. »</p>
-                        <div class="testimonial-author">— DRH, Groupe Industriel Partenaire</div>
+                <div class="detail-cards">
+                    <div class="detail-item">
+                        <h4>Mécénat financier</h4>
+                        <p>Soutenez directement nos programmes nationaux de prévention, nos guides juridiques gratuits ou l'accompagnement de proximité.</p>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>« L'accompagnement et les formations dispensées par la FNATH ont rencontré un écho formidable auprès de nos équipes managériales. »</p>
-                        <div class="testimonial-author">— Responsable RSE, Entreprise Services</div>
+                    <div class="detail-item">
+                        <h4>Mécénat de compétences</h4>
+                        <p>Mettez à disposition le savoir-faire de vos collaborateurs (juridique, communication, numérique) sur des missions ponctuelles.</p>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- 6. Rubrique Contactez-nous -->
+            <!-- =========================================================
+                 RUBRIQUE CONTACTEZ-NOUS (Toujours accessible en bas)
+            ========================================================== -->
             <section class="contact-card-fnath" id="contactez-nous">
                 <h3>Contactez-nous</h3>
                 <p>Vous souhaitez mettre en place une action de sensibilisation, soutenir la FNATH par le mécénat ou devenir partenaire ? Notre équipe vous répond.</p>
@@ -243,6 +281,7 @@
                     <span class="form-feedback" id="form-feedback"></span>
                 </form>
             </section>
+
         </main>
     </div>
 
@@ -255,4 +294,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-           
