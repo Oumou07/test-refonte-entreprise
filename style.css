@@ -1,82 +1,250 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --rouge-fnath: #B21E18;
+    --jaune-fnath: #E5A823;
+    --bleu-nuit: #1E1B3A;
+    --texte-gris: #4A4A4A;
+    --fond-clair: #FFFFFF;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.container {
-    width: 85%;
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
+body {
+    background-color: var(--fond-clair);
+    color: var(--texte-gris);
 }
 
-header {
-    background: #004d99;
-    color: #fff;
-    padding: 2rem 0;
+/* --- Barre supérieure --- */
+.top-navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 25px;
+    background: #fff;
+}
+
+.btn-adherer {
+    background-color: var(--jaune-fnath);
+    color: #000;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
     text-align: center;
 }
 
-main {
-    padding: 2rem 0;
-}
-
-h2 {
-    color: #004d99;
-}
-
-/* Grille de services */
-.services-grid {
+.nav-links {
     display: flex;
     gap: 20px;
-    margin: 2rem 0;
 }
 
-.card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex: 1;
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 11px;
+    font-weight: 700;
 }
 
-/* Formulaire */
-form {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.nav-links a.active {
+    color: var(--rouge-fnath);
+    border-bottom: 2px solid var(--rouge-fnath);
+    padding-bottom: 3px;
+}
+
+/* --- Structure principale avec Sidebar --- */
+.main-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 90px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
 }
 
-label {
-    margin-top: 10px;
-    font-weight: bold;
+.logo-box {
+    padding: 20px 10px;
+    text-align: center;
 }
 
-input, textarea {
-    padding: 10px;
+.logo-text {
+    font-weight: 800;
+    color: var(--rouge-fnath);
+    font-size: 18px;
+    display: block;
+}
+
+.logo-sub {
+    font-size: 10px;
+    color: #555;
+}
+
+.side-menu {
+    background-color: var(--jaune-fnath);
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 11px;
+    color: #000;
+}
+
+.side-menu .hamburger {
+    font-size: 22px;
     margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-button {
-    margin-top: 15px;
-    background: #004d99;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
+.side-question {
+    background-color: var(--rouge-fnath);
+    color: #fff;
+    padding: 20px 8px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
 }
 
-button:hover {
-    background: #003366;
+.side-question .icon-q {
+    display: inline-block;
+    background: #fff;
+    color: var(--rouge-fnath);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    line-height: 22px;
+    margin-top: 8px;
+    font-weight: 800;
 }
+
+.side-avis {
+    border: 2px solid var(--jaune-fnath);
+    padding: 15px 5px;
+    text-align: center;
+    background: #fff;
+}
+
+.avis-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #000;
+}
+
+.stars {
+    color: var(--jaune-fnath);
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.btn-avis {
+    background-color: var(--jaune-fnath);
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 4px 6px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* --- Contenu Principal --- */
+.content-area {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+/* --- HERO SECTION CORRIGÉE (Plus de chevauchement !) --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Espace propre entre l'image et le bloc rouge */
+    margin-bottom: 50px;
+}
+
+.hero-image {
+    flex: 1; /* Prend 50% de l'espace */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.hero-card-red {
+    flex: 1; /* Prend les 50% restants à droite sans toucher l'image */
+    background-color: var(--rouge-fnath);
+    color: #ffffff;
+    padding: 55px 45px;
+    border-radius: 8px; /* Légèrement adouci pour un rendu plus moderne */
+    box-shadow: 0 10px 25px rgba(178, 30, 24, 0.15);
+}
+
+.breadcrumb {
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 25px;
+}
+
+.hero-card-red h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-card-red p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+/* --- Section inférieure --- */
+.intro-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.badge-dark {
+    background-color: var(--bleu-nuit);
+    color: #fff;
+    padding: 25px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    width: 240px;
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
+.intro-text h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.intro-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Adaptation mobile */
+@media (max-width: 900px) {
+    .hero-section, .intro-section {
+        flex-direction: column;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+ 
