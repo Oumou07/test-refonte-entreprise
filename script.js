@@ -1,10 +1,16 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche la page de se recharger bêtement
+document.addEventListener('DOMContentLoaded', () => {
+    // Gestion active des liens de la sidebar au clic
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
     
-    // Affiche un message de succès dynamique
-    const msg = document.getElementById('formMessage');
-    msg.textContent = "Merci ! Votre demande a bien été envoyée à l'équipe Partenaires de la FNATH.";
-    
-    // Vide le formulaire
-    this.reset();
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Empêche le rechargement par défaut pour la démo
+            e.preventDefault();
+            
+            sidebarLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    console.log("Espace Entreprise FNATH chargé avec succès !");
 });
