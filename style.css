@@ -158,49 +158,50 @@ body {
     padding: 20px 40px;
 }
 
-/* --- HERO SECTION CORRIGÉE (Sans chevauchement) --- */
-.hero-section {
+/* --- HERO SECTION AVEC SUPERPOSITION (Style site officiel) --- */
+.hero-section-overlap {
     display: flex;
     align-items: center;
-    gap: 35px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .hero-image {
-    flex: 1;
+    width: 65%; /* L'image prend un peu plus de la moitié */
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
-.hero-card-red {
-    flex: 1;
+.hero-card-red-overlap {
+    width: 48%; /* Le bloc rouge chevauche par-dessus */
     background-color: var(--rouge-fnath);
     color: #ffffff;
-    padding: 55px 45px;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(178, 30, 24, 0.15);
+    padding: 50px 40px;
+    margin-left: -12%; /* C'est ça qui crée le chevauchement exact */
+    z-index: 10; /* S'assure que le bloc rouge est bien au-dessus de l'image */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .breadcrumb {
     font-size: 12px;
     opacity: 0.85;
-    margin-bottom: 25px;
-}
-
-.hero-card-red h1 {
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.hero-card-red p {
-    font-size: 16px;
+.hero-card-red-overlap h1 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-card-red-overlap p {
+    font-size: 15px;
     line-height: 1.6;
     font-weight: 400;
     opacity: 0.95;
@@ -240,12 +241,19 @@ body {
 
 /* Adaptation mobile */
 @media (max-width: 900px) {
-    .hero-section, .intro-section {
+    .hero-section-overlap {
         flex-direction: column;
+    }
+    .hero-card-red-overlap {
+        width: 100%;
+        margin-left: 0;
+        margin-top: -20px;
     }
     .sidebar {
         display: none;
     }
 }
+
+
 
 
