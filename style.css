@@ -134,6 +134,29 @@ h1, h2, h3, h4 {
     background-color: var(--fnath-dark);
 }
 
+/* LOGO FNATH */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-fnath {
+    width: 95px;
+    height: auto;
+    display: block;
+}
+
+/* Adaptation sur téléphone */
+@media (max-width: 768px) {
+    .logo-fnath {
+        width: 70px;
+    }
+}
+
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, var(--fnath-dark) 0%, var(--fnath-blue) 100%);
