@@ -3,85 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entreprises : Agir avec la FNATH</title>
+    <title>Espace Entreprises – Engagez-vous aux côtés de la FNATH</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Barre de navigation supérieure -->
-    <header class="top-navbar">
-        <a href="#" class="btn-adherer">ADHÉRER POUR POSER VOTRE QUESTION EN LIGNE</a>
-        <nav class="nav-links">
-            <a href="#">J'ADHÈRE</a>
-            <a href="#">ESPACE ADHÉRENT</a>
-            <a href="#">ESPACE PRESSE</a>
-            <a href="#" class="active">ESPACE ENTREPRISE</a>
-            <a href="#">RECHERCHE</a>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <a href="#">Adhérer pour poser votre question en ligne</a>
+        <a href="#" class="btn-adherer-top">J'adhère</a>
+        <a href="#">Espace adhérent</a>
+        <a href="#">Espace Presse</a>
+        <a href="#" style="font-weight: 600;">Espace entreprise</a>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <a href="https://www.fnath.org" class="logo-container">
+            <div class="logo-svg">
+                <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#1B64A8" stroke-width="8"/>
+                    <path d="M30 65 C40 30, 60 30, 70 65" stroke="#E85A1B" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>FNATH</h1>
+                    <span>Association des accidentés de la vie</span>
+                </div>
+            </div>
+        </a>
+        <nav class="main-nav">
+            <a href="#">Nous connaître</a>
+            <a href="#">S'informer</a>
+            <a href="#">Conseil & Défense</a>
+            <a href="#" class="active">Espace entreprise</a>
+            <a href="#" class="btn-question">Poser votre question</a>
         </nav>
     </header>
 
-    <!-- Conteneur principal avec la barre latérale à gauche -->
-    <div class="main-layout">
-        
-        <!-- Barre latérale fixe -->
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Entreprises : Agir avec la FNATH</h2>
+            <p>Aujourd'hui, le soutien des entreprises est essentiel pour développer nos actions de sensibilisation, d'accompagnement humain et de prévention des risques professionnels.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Inclusion et handicap en entreprise - FNATH">
+        </div>
+    </section>
+
+    <!-- Layout with Sidebar & Content -->
+    <div class="container-layout">
+        <!-- Sidebar Navigation -->
         <aside class="sidebar">
-            <div class="logo-box">
-                <span class="logo-text">FNATH</span>
-                <span class="logo-sub">Fnath.org</span>
-            </div>
-            <div class="side-menu">
-                <span>MENU</span>
-                <div class="hamburger">☰</div>
-            </div>
-            <div class="side-question">
-                <p>POSER VOTRE QUESTION</p>
-                <span class="icon-q">?</span>
-            </div>
-            <div class="side-avis">
-                <p class="avis-title">AVIS</p>
-                <div class="stars">★★★★☆</div>
-                <span class="btn-avis">VOIR LES AVIS</span>
-            </div>
+            <h3>Espace Entreprise</h3>
+            <ul>
+                <li><a href="#" class="active">Entreprise : Engagez-vous</a></li>
+                <li><a href="#">Démarche RSE</a></li>
+                <li><a href="#">Sécurité au travail</a></li>
+                <li><a href="#">Mécénat</a></li>
+                <li><a href="#">Contactez-nous</a></li>
+                <li><a href="#">Nos partenaires</a></li>
+            </ul>
         </aside>
 
-        <!-- Zone de contenu à droite -->
-        <main class="content-area">
-            
-            <!-- Section Hero avec Superposition (Effet site d'origine) -->
-            <section class="hero-section-overlap">
-                <!-- Image de fond / gauche -->
-                <div class="hero-image">
-                    <img src="illustration-entreprise.png" alt="Illustration diversité et inclusion en entreprise">
-                </div>
+        <!-- Main Content Area -->
+        <main class="content-main">
+            <h2>Engagez-vous aux côtés de la FNATH</h2>
+            <p>Depuis plus de 100 ans, la FNATH accompagne les personnes accidentées de la vie, malades, invalides ou en situation de handicap pour favoriser leur autonomie, leur inclusion sociale et leur maintien dans l'emploi.</p>
+            <p>Association reconnue d'utilité publique, nous agissons partout en France grâce à un réseau de bénévoles, de salariés et de partenaires engagés pour bâtir un monde du travail plus inclusif.</p>
 
-                <!-- Bloc rouge superposé par-dessus l'image -->
-                <div class="hero-card-red-overlap">
-                    <div class="breadcrumb">Accueil &nbsp;|&nbsp; Entreprises : Agir avec la FNATH</div>
-                    <h1>Entreprises : Agir avec la FNATH</h1>
-                    <p>
-                        Aujourd'hui, le soutien des entreprises est essentiel pour développer nos actions de sensibilisation, d'accompagnement humain et de prévention.
-                    </p>
+            <!-- 3 Pillars Cards -->
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Démarche RSE</h3>
+                    <p>Valorisez votre responsabilité sociétale en intégrant l'inclusion des collaborateurs en situation de handicap au cœur de votre stratégie.</p>
+                    <a href="#" class="card-link">En savoir plus →</a>
                 </div>
-            </section>
+                <div class="pillar-card">
+                    <h3>Sécurité au travail</h3>
+                    <p>Sensibilisez vos équipes aux risques professionnels grâce à notre expertise de terrain et nos retours d'expérience uniques.</p>
+                    <a href="#" class="card-link">Découvrir →</a>
+                </div>
+                <div class="pillar-card">
+                    <h3>Mécénat & Partenariat</h3>
+                    <p>Soutenez nos actions de prévention et bénéficiez d'avantages fiscaux tout en fédérant vos salariés autour d'une cause forte.</p>
+                    <a href="#" class="card-link">S'engager →</a>
+                </div>
+            </div>
 
-            <!-- Section de présentation en dessous -->
-            <section class="intro-section">
-                <div class="badge-dark">
-                    ENTREPRISE : ENGAGEZ-VOUS AUX CÔTÉS DE LA FNATH
+            <!-- Testimonials Section -->
+            <div class="testimonials-section">
+                <h3>Ce que disent nos partenaires</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>« Un partenariat de grande valeur qui a transformé notre approche de la prévention des risques et de l'inclusion en interne. »</p>
+                        <div class="testimonial-author">— DRH, Groupe Industriel Partenaire</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>« L'accompagnement et les formations dispensées par la FNATH ont rencontré un écho formidable auprès de nos équipes managériales. »</p>
+                        <div class="testimonial-author">— Responsable RSE, Entreprise Services</div>
+                    </div>
                 </div>
-                <div class="intro-text">
-                    <h2>Entreprises : Agir avec la FNATH</h2>
-                    <p>
-                        Depuis plus de 100 ans, la FNATH accompagne les personnes accidentées de la vie, malades, invalides ou en situation de handicap pour favoriser leur autonomie, leur inclusion sociale et leur maintien dans l'emploi.
-                    </p>
-                </div>
-            </section>
+            </div>
 
+            <!-- Contact Box -->
+            <div class="contact-box">
+                <div>
+                    <h4>Un projet de partenariat ou une question ?</h4>
+                    <p>Notre équipe dédiée est à votre écoute pour construire une collaboration sur-mesure.</p>
+                </div>
+                <a href="mailto:communication@fnath.com" class="btn-contact">Nous contacter</a>
+            </div>
         </main>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 FNATH — Association des accidentés de la vie. Tous droits réservés.</p>
+        <p>Association reconnue d'utilité publique • 21 rue Ponchardier - 42100 Saint-Étienne</p>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript externe -->
     <script src="script.js"></script>
 </body>
 </html>
-    
+             
