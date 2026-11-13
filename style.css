@@ -62,26 +62,6 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-/* LOGO FNATH */
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo-fnath {
-    width: 110px;
-    height: auto;
-    display: block;
-}
-
-/* Version téléphone */
-@media (max-width: 768px) {
-    .logo-fnath {
-        width: 75px;
-    }
-}
 
 /* Main Header */
 .main-header {
