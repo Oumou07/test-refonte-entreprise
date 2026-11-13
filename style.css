@@ -551,3 +551,63 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* EN-TÊTE : logo à gauche, menu à droite */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    gap: 30px;
+}
+
+/* Conteneur du logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 75px;
+}
+
+/* Taille du logo SVG */
+.logo-container svg,
+.logo-fnath {
+    width: 65px !important;
+    height: 95px !important;
+    max-width: 65px;
+    max-height: 95px;
+    display: block;
+}
+
+/* Menu de navigation à droite */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Adaptation téléphone */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 12px 20px;
+        gap: 15px;
+    }
+
+    .logo-container {
+        width: 55px;
+    }
+
+    .logo-container svg,
+    .logo-fnath {
+        width: 45px !important;
+        height: 65px !important;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+}
