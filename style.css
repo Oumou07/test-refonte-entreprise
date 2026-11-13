@@ -532,62 +532,46 @@ footer p {
     }
 }
 
-/* EN-TÊTE : logo à gauche, menu à droite */
+
+/* LOGO FNATH PETIT ET À GAUCHE */
 
 .main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 5%;
-    gap: 30px;
+    padding: 12px 5%;
+    min-height: 90px;
 }
 
-/* Conteneur du logo */
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 55px;
     flex-shrink: 0;
-    width: 75px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Taille du logo SVG */
-.logo-container svg,
-.logo-fnath {
-    width: 65px !important;
-    height: 95px !important;
-    max-width: 65px;
-    max-height: 95px;
+.logo-container svg {
     display: block;
+    width: 40px !important;
+    height: 110px !important;
+    max-width: 40px !important;
+    max-height: 110px !important;
+    flex-shrink: 0;
 }
 
-/* Menu de navigation à droite */
 .main-nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 25px;
-    flex-wrap: wrap;
+    margin-left: auto;
 }
 
-/* Adaptation téléphone */
 @media (max-width: 768px) {
-    .main-header {
-        padding: 12px 20px;
-        gap: 15px;
-    }
-
-    .logo-container {
-        width: 55px;
-    }
-
-    .logo-container svg,
-    .logo-fnath {
-        width: 45px !important;
-        height: 65px !important;
-    }
-
-    .main-nav {
-        gap: 12px;
+    .logo-container svg {
+        width: 30px !important;
+        height: 83px !important;
     }
 }
